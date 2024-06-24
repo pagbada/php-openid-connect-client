@@ -65,7 +65,8 @@ class Generator
             Param::REDIRECT_URI => $clientInfo->getRedirectUri(),
             Param::RESPONSE_TYPE => $this->arrayToSpaceDelimited($request->getResponseType()),
             Param::SCOPE => $this->arrayToSpaceDelimited($request->getScope()),
-            Param::STATE => $request->getState()
+            Param::STATE => $request->getState(),
+            Param::PROMPT => $clientInfo->getPrompt()
         );
         
         foreach ($params as $name => $value) {

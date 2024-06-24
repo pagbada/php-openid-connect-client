@@ -26,6 +26,7 @@ use InoOicClient\Oic\Authorization\Param;
  * @method string getAuthorizationEndpoint()
  * @method string getTokenEndpoint()
  * @method string getUserInfoEndpoint()
+ * @method string getPrompt()
  */
 class ClientInfo extends AbstractEntity
 {
@@ -42,6 +43,8 @@ class ClientInfo extends AbstractEntity
 
     const USER_INFO_ENDPOINT = 'user_info_endpoint';
 
+    const PROMPT = 'prompt';
+
     protected $allowedProperties = array(
         Param::CLIENT_ID,
         Param::REDIRECT_URI,
@@ -50,7 +53,8 @@ class ClientInfo extends AbstractEntity
         self::DESCRIPTION,
         self::AUTHORIZATION_ENDPOINT,
         self::TOKEN_ENDPOINT,
-        self::USER_INFO_ENDPOINT
+        self::USER_INFO_ENDPOINT,
+        self::PROMPT
     );
 
 
